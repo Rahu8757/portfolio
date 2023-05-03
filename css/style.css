@@ -4,6 +4,11 @@ body {
   font-family: "Merriweather", serif;
   color: #40514e;
 }
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 .first {
   background-color: #e4f9f5;
@@ -43,11 +48,14 @@ h2 {
   position: absolute;
   left: 300px;
   bottom: 300px;
+  animation: btm1 5s linear infinite;
+  animation-fill-mode: both;
 }
 .top-cloud {
   position: absolute;
   right: 300px;
   top: 50px;
+  animation: topc1 5s ease-in infinite;
 }
 
 .profilepic {
@@ -142,4 +150,26 @@ a:hover {
   color: #eaf6f6;
   font-size: 0.75rem;
   padding: 20px 0;
+}
+
+@keyframes btm1 {
+  from {
+    left: -200px;
+    bottom: 300px;
+  }
+  to {
+    left: 110%;
+    bottom: 300px;
+  }
+}
+
+@keyframes topc1 {
+  from {
+    right: -200px;
+    top: 50px;
+  }
+  to {
+    right: 110%;
+    top: 50px;
+  }
 }
